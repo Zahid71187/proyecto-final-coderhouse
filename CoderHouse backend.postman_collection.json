@@ -1,0 +1,543 @@
+{
+	"info": {
+		"_postman_id": "e97162d5-27af-4472-bd05-a31f5c9a40e4",
+		"name": "CoderHouse backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Local",
+			"item": [
+				{
+					"name": "Carritos",
+					"item": [
+						{
+							"name": "Crear carrito",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/api/carrito",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"carrito"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Agregar producto al carrito",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idProducto\" : 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/carrito/1/productos",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"carrito",
+										"1",
+										"productos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Consultar carrito",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/api/carrito/1/productos/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"carrito",
+										"1",
+										"productos",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Eliminar producto de carrito",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/api/carrito/2/productos/1",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"carrito",
+										"2",
+										"productos",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Eliminar carrito",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/api/carrito/1",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"carrito",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Productos",
+					"item": [
+						{
+							"name": "Agregar producto",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombre\": \"Tablet\",\r\n    \"descripcion\": \"Hermosa tablet\",\r\n    \"foto\": \"\",\r\n    \"precio\": 100,\r\n    \"stock\": 10\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/productos",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"productos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "consultar productos",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Laptop 5\",\r\n    \"price\": 1100.50,\r\n    \"thumbnail\": \"http://images.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/productos/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"productos",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "consultar producto",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/api/productos/1",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"productos",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "actualizar producto",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombre\": \"Tablet\",\r\n    \"descripcion\": \"Hermosa tablet mediana\",\r\n    \"foto\": \"\",\r\n    \"precio\": 100,\r\n    \"stock\": 11\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/productos/1",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"productos",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Eliminar produto",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/api/productos/1",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"productos",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Glitch",
+			"item": [
+				{
+					"name": "Carritos",
+					"item": [
+						{
+							"name": "Crear carrito",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "https://shrub-woolly-xenon.glitch.me/api/carrito",
+									"protocol": "https",
+									"host": [
+										"shrub-woolly-xenon",
+										"glitch",
+										"me"
+									],
+									"path": [
+										"api",
+										"carrito"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Agregar producto al carrito",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idProducto\" : 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://shrub-woolly-xenon.glitch.me/api/carrito/1/productos",
+									"protocol": "https",
+									"host": [
+										"shrub-woolly-xenon",
+										"glitch",
+										"me"
+									],
+									"path": [
+										"api",
+										"carrito",
+										"1",
+										"productos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Consultar carrito",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://shrub-woolly-xenon.glitch.me/api/carrito/1/productos/",
+									"protocol": "https",
+									"host": [
+										"shrub-woolly-xenon",
+										"glitch",
+										"me"
+									],
+									"path": [
+										"api",
+										"carrito",
+										"1",
+										"productos",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Eliminar producto de carrito",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://shrub-woolly-xenon.glitch.me/api/carrito/2/productos/1",
+									"protocol": "https",
+									"host": [
+										"shrub-woolly-xenon",
+										"glitch",
+										"me"
+									],
+									"path": [
+										"api",
+										"carrito",
+										"2",
+										"productos",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Eliminar carrito",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://shrub-woolly-xenon.glitch.me/api/carrito/1",
+									"protocol": "https",
+									"host": [
+										"shrub-woolly-xenon",
+										"glitch",
+										"me"
+									],
+									"path": [
+										"api",
+										"carrito",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Productos",
+					"item": [
+						{
+							"name": "Agregar producto",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombre\": \"Tablet\",\r\n    \"descripcion\": \"Hermosa tablet\",\r\n    \"foto\": \"\",\r\n    \"precio\": 100,\r\n    \"stock\": 10\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://shrub-woolly-xenon.glitch.me/api/productos",
+									"protocol": "https",
+									"host": [
+										"shrub-woolly-xenon",
+										"glitch",
+										"me"
+									],
+									"path": [
+										"api",
+										"productos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "consultar productos",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Laptop 5\",\r\n    \"price\": 1100.50,\r\n    \"thumbnail\": \"http://images.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://shrub-woolly-xenon.glitch.me/api/productos/",
+									"protocol": "https",
+									"host": [
+										"shrub-woolly-xenon",
+										"glitch",
+										"me"
+									],
+									"path": [
+										"api",
+										"productos",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "consultar producto",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://shrub-woolly-xenon.glitch.me/api/productos/1",
+									"protocol": "https",
+									"host": [
+										"shrub-woolly-xenon",
+										"glitch",
+										"me"
+									],
+									"path": [
+										"api",
+										"productos",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "actualizar producto",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombre\": \"Tablet\",\r\n    \"descripcion\": \"Hermosa tablet mediana\",\r\n    \"foto\": \"\",\r\n    \"precio\": 100,\r\n    \"stock\": 11\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://shrub-woolly-xenon.glitch.me/api/productos/1",
+									"protocol": "https",
+									"host": [
+										"shrub-woolly-xenon",
+										"glitch",
+										"me"
+									],
+									"path": [
+										"api",
+										"productos",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Eliminar produto",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://shrub-woolly-xenon.glitch.me/api/productos/1",
+									"protocol": "https",
+									"host": [
+										"shrub-woolly-xenon",
+										"glitch",
+										"me"
+									],
+									"path": [
+										"api",
+										"productos",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
